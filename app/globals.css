@@ -272,12 +272,6 @@ section {
   transform: translateX(-120%);
   transition: all 0.9s ease;
 }
-
-footer:hover .glass-sweep {
-  opacity: 1;
-  transform: translateX(120%);
-}
-
 /* ✨ Snap Scrolling */
 .snap-container {
   scroll-snap-type: y mandatory;
@@ -329,21 +323,24 @@ body::before {
 }
 
 /* ---------------- Mobile Optimizations ---------------- */
-
 @media (max-width: 768px) {
 
-  /* ✅ Restore default cursor on touch devices */
   * {
     cursor: auto;
   }
 
-  /* ✅ Prevent iOS horizontal jitter */
   html, body {
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
   }
+ body {
+  background: #0a0a0a;
+}
 
-  /* ✅ Reduce glow intensity for performance */
+  .glow-bg {
+    display: none;
+  }
+
   .glow-bg::before {
     opacity: 0.25;
     filter: blur(40px);
@@ -354,43 +351,32 @@ body::before {
     opacity: 0.2;
   }
 
-  /* ✅ Slow + soften beam animation */
   .glow-beam {
     opacity: 0.12;
     animation: beamDrift 28s linear infinite;
   }
 
-  /* ✅ Lighter particles */
   .glow-particles {
     opacity: 0.06;
     background-size: 160px 160px;
     animation: particlesFloat 120s linear infinite;
   }
 
-  /* ✅ Subtle color shift */
   .glow-color-shift {
     opacity: 0.15;
     animation: colorShift 22s ease-in-out infinite;
   }
 
-  /* ✅ Reduce shimmer effects */
   .shimmer-text {
     animation: shimmerSweep 8s ease-in-out infinite;
   }
 
-  .nav-shimmer {
-    display: none; /* hover doesn't exist on mobile */
-  }
-
-  .gradient-border {
-    display: none; /* hover-only visual */
-  }
-
+  .nav-shimmer,
+  .gradient-border,
   .glass-sweep {
-    display: none; /* avoids unnecessary repaints */
+    display: none;
   }
 
-  /* ✅ Disable snap scrolling on mobile (prevents sticky feel) */
   main,
   .snap-container {
     scroll-snap-type: none;
@@ -401,69 +387,16 @@ body::before {
     scroll-snap-align: none;
   }
 
-  /* ✅ Improve tap interactions */
   a, button {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* ✅ Modal icon sizing */
   .modal-icon {
     width: 40px;
     height: 40px;
   }
 
-  /* ✅ Reduce noise overlay strength */
   body::before {
     opacity: 0.015;
-  }
-}
-
-
-/* ---------------- Small Phones ---------------- */
-
-@media (max-width: 480px) {
-
-  .glow-bg::before {
-    opacity: 0.18;
-    filter: blur(32px);
-  }
-
-  .glow-beam {
-    opacity: 0.08;
-  }
-
-  .glow-particles {
-    opacity: 0.04;
-  }
-}
-
-
-/* ---------------- Motion Accessibility ---------------- */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .glow-bg {
-    display: none;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  * {
-    cursor: none;
-  }
-}
-
-@media (max-width: 768px) {
-  [class*="blur-"] {
-    filter: blur(40px) !important;
   }
 }

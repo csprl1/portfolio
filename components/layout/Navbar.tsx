@@ -57,14 +57,16 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-           className="
-  mt-3
-  w-[calc(100%-16px)]
-  sm:w-[calc(100%-24px)]
-  md:max-w-6xl md:mx-auto md:mt-6
+          className="
+  mt-3 md:mt-6
+  fixed left-1/2 -translate-x-1/2
+  w-[calc(100%-20px)]
+  sm:w-[calc(100%-28px)]
+  md:w-full md:max-w-6xl
   px-3 py-2
   flex items-center
-  rounded-full backdrop-blur-xl
+  rounded-full
+  backdrop-blur-xl
   bg-white/[0.04]
   border border-white/10
   shadow-[0_8px_40px_rgba(0,0,0,0.6)]
