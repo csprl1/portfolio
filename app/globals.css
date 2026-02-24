@@ -238,20 +238,7 @@ html, body {
 }
 
 /* ✨ Glass Reflection Sweep */
-.glass-sweep {
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255,255,255,0.08),
-    transparent 70%
-  );
-  opacity: 0;
-  transform: translateX(-120%);
-  transition: all 0.7s ease;
-}
+
 
 .group:hover .glass-sweep {
   opacity: 1;
@@ -310,20 +297,7 @@ body::before {
   z-index: 9999;
 }
 
-.glass-sweep {
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255,255,255,0.08),
-    transparent 70%
-  );
-  opacity: 0;
-  transform: translateX(-120%);
-  transition: all 0.7s ease;
-}
+
 
 .group:hover .glass-sweep {
   opacity: 1;
@@ -472,5 +446,24 @@ body::before {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .glow-bg {
+    display: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
+
+@media (max-width: 768px) {
+  [class*="blur-"] {
+    filter: blur(40px) !important;
   }
 }
