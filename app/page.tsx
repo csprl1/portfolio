@@ -76,7 +76,7 @@ export default function HomePage() {
     <main className="relative w-full overflow-x-hidden">
       
       {/* ✅ Render ONLY on desktop */}
-      {!isMobile && <GlowBackground />}
+      {<GlowBackground />}
       {!isMobile && <MouseParallax />}
 
       <Navbar />

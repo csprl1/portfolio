@@ -334,7 +334,7 @@ const cards = [
   { icon: Server, title: "Backend", tech: "Node.js, Express, Axios, REST/GraphQL" },
   { icon: Database, title: "Database", tech: "PostgreSQL, MongoDB, Redis, NeonDB" },
   { icon: Smartphone, title: "Mobile", tech: "React Native, Flutter, Swift, Kotlin" },
-  { icon: Cloud, title: "DevOps", tech: "Docker, AWS, Vercel, Railwayr, Cloudflare" },
+  { icon: Cloud, title: "DevOps", tech: "Docker, AWS, Vercel, Railway, Cloudflare" },
   { icon: Wrench, title: "Tools", tech: "Git, VS Code, Figma, Xcode, Android Studio" },
 ];
 
