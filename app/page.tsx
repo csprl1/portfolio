@@ -9,18 +9,38 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { Footer } from "@/components/layout/Footer";
 
+// export default function HomePage() {
+//   return (
+//     <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+//       <GlowBackground />
+//       <MouseParallax />
+//       <Navbar />
+//       <Hero />
+//       <DeveloperSection/>
+//       <PhotographySection/>
+//       <IllustrationSection/>
+//       <BlogSection/>
+//       <Footer/>
+//     </section>
+//   );
+// }
 export default function HomePage() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="relative w-full overflow-x-hidden">
       <GlowBackground />
-      <MouseParallax />
+      <MouseParallax className="hidden md:block" />
+
       <Navbar />
-      <Hero />
-      <DeveloperSection/>
-      <PhotographySection/>
-      <IllustrationSection/>
-      <BlogSection/>
-      <Footer/>
-    </section>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Hero />
+        <DeveloperSection />
+        <PhotographySection />
+        <IllustrationSection />
+        <BlogSection />
+      </div>
+
+      <Footer />
+    </main>
   );
 }

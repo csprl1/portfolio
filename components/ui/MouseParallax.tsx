@@ -3,7 +3,11 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect } from "react";
 
-export function MouseParallax() {
+interface MouseParallaxProps {
+  className?: string;
+}
+
+export function MouseParallax({ className }: MouseParallaxProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -18,7 +22,7 @@ export function MouseParallax() {
 
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [x, y]);
 
   return (
     <motion.div
@@ -28,9 +32,12 @@ export function MouseParallax() {
         translateX: "-50%",
         translateY: "-50%",
       }}
-     className="pointer-events-none fixed z-0
-  w-[500px] h-[500px] rounded-full
-  bg-accent/6 blur-[120px]"
+      className={`
+        pointer-events-none fixed z-0
+        w-[500px] h-[500px] rounded-full
+        bg-accent/6 blur-[120px]
+        ${className || ""}
+      `}
     />
   );
 }
