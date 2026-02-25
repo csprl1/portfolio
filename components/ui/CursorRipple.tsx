@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function CursorRipple() {
+export default function CursorRipple() {
   const [ripples, setRipples] = useState<any[]>([]);
 
   useEffect(() => {

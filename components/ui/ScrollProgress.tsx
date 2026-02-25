@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
-export function ScrollProgress() {
+export default function ScrollProgress() {
   const { scrollYProgress } = useScroll();
 
   const scaleX = useSpring(scrollYProgress, {

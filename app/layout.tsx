@@ -3,12 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 /* ✨ Import CursorGlow */
-import { CursorGlow } from "@/components/ui/CursorGlow";
-import { CursorTrail } from "@/components/ui/CursorTrail";
-import { CursorRipple } from "@/components/ui/CursorRipple";
 import { Cursor } from "@/components/ui/Cursor";
-import { PageTransition } from "@/components/ui/PageTransition";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import ClientEffects from "@/components/providers/ClientEffects";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,7 +55,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.sonurajeugale.com",
   },
-};;
+};
+
 
 export default function RootLayout({
   children,
@@ -74,11 +71,11 @@ export default function RootLayout({
         {/* ✨ Global Cursor Glow */}
         <Cursor/> 
         {/* <CursorTrail /> */}
-        <CursorRipple />
-          <ScrollProgress />
+        <ClientEffects/>
 
           {children}
 
+      {typeof window === "undefined" && (
         <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -116,6 +113,7 @@ export default function RootLayout({
     }),
   }}
 />
+)}
       
       </body>
     </html>
