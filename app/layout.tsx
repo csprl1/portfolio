@@ -21,8 +21,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Full Stack Developer Portfolio",
+  title: {
+    default: "Prathamesh Ugale | Full Stack Developer, Designer & Visual Creator",
+    template: "%s | Prathamesh Ugale",
+  },
+
+  description:
+    "Portfolio of Prathamesh Ugale – Full Stack Developer, UI/UX Designer, Photographer, and Illustrator crafting modern digital experiences and visual work.",
+
+  keywords: [
+    "Prathamesh Ugale",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "UI UX Designer",
+    "Photographer",
+    "Illustrator",
+    "Developer Portfolio",
+  ],
+
+  authors: [{ name: "Prathamesh Ugale" }],
+  creator: "Prathamesh Ugale",
+
+  metadataBase: new URL("https://www.sonurajeugale.com"),
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +68,25 @@ export default function RootLayout({
           <ScrollProgress />
 
           {children}
+
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Prathamesh Ugale",
+      url: "https://www.sonurajeugale.com",
+      jobTitle: "Full Stack Developer & Visual Creator",
+      knowsAbout: [
+        "Web Development",
+        "UI/UX Design",
+        "Photography",
+        "Illustration"
+      ]
+    }),
+  }}
+/>
       
       </body>
     </html>

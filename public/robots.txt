@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.sonurajeugale.com
+
+# Sitemaps
+Sitemap: https://www.sonurajeugale.com/sitemap.xml
