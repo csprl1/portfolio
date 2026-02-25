@@ -12,6 +12,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -656,24 +657,29 @@ export default function IllustrationPage() {
         book covers, concept art, and visual storytelling projects.
       </p>
 
-      <button
-        className="
-          h-10 sm:h-11
-          px-5 sm:px-7
-          rounded-full
-          bg-accent
-          text-black
-          text-xs sm:text-sm
-          font-medium
-          tracking-tight
-          hover:scale-[1.04]
-          active:scale-[0.96]
-          transition-transform duration-150
-          shadow-[0_6px_20px_rgba(0,0,0,0.35)]
-        "
+      <Link
+       href="/contact"
+       className="
+            group mt-5 sm:mt-6
+            inline-flex items-center gap-2
+
+            px-4 sm:px-5
+            py-2 sm:py-2.5
+            rounded-full
+
+            bg-amber-400
+            text-black
+            text-sm font-medium
+
+            shadow-[0_10px_40px_rgba(255,215,0,0.35)]
+            hover:shadow-[0_12px_50px_rgba(255,215,0,0.45)]
+
+            transition-all duration-300
+            active:scale-[0.98]
+          "
       >
         Commission Work
-      </button>
+      </Link>
 
       <p className="text-amber-300/40 text-[10px] sm:text-xs mt-3 sm:mt-5">
         Limited availability · Open for selected projects

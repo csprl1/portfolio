@@ -18,6 +18,7 @@ import {
   Palette,
   LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const metaCertifications = [
   {
@@ -1172,7 +1173,9 @@ const resetParallax = () => {
         </p>
 
         {/* Button */}
-        <button
+        <Link
+         href="/contact"
+
           className="
             group mt-5 sm:mt-6
             inline-flex items-center gap-2
@@ -1201,7 +1204,7 @@ const resetParallax = () => {
           ">
             ↗
           </span>
-        </button>
+        </Link>
 
       </div>
     </div>
