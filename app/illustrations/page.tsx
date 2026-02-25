@@ -19,7 +19,10 @@ import { Footer } from "@/components/layout/Footer";
 import { ParallaxBackground } from "@/components/ui/ParallaxBackground";
 import { Counter } from "@/components/ui/NewCounter";
 
+
+
 /* ---------------- DATA ---------------- */
+
 
 const categories = ["All", "Characters", "Concept Art", "Comics", "3D", "Slice of Life", "Environments", "Urban Sketches", "Fantasy", "Architecture"];
 

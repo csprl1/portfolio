@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+
+
 const metaCertifications = [
   {
     title: "Programming Fundamentals in Kotlin",

@@ -21,35 +21,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sonurajeugale.com"),
+
   title: {
-    default: "Prathamesh Ugale | Full Stack Developer, Designer & Visual Creator",
+    default: "Prathamesh Ugale | Full Stack Developer",
     template: "%s | Prathamesh Ugale",
   },
 
   description:
-    "Portfolio of Prathamesh Ugale – Full Stack Developer, UI/UX Designer, Photographer, and Illustrator crafting modern digital experiences and visual work.",
+    "Prathamesh Ugale – Full Stack Developer specialising in modern web development, scalable applications, UI/UX design, photography, and illustration.",
 
   keywords: [
     "Prathamesh Ugale",
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
-    "UI UX Designer",
-    "Photographer",
-    "Illustrator",
-    "Developer Portfolio",
+    "Web Developer India",
+    "Software Developer Portfolio",
+    "UI UX Developer",
   ],
 
   authors: [{ name: "Prathamesh Ugale" }],
   creator: "Prathamesh Ugale",
 
-  metadataBase: new URL("https://www.sonurajeugale.com"),
-
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-};
+
+  alternates: {
+    canonical: "https://www.sonurajeugale.com",
+  },
+};;
 
 export default function RootLayout({
   children,
@@ -77,12 +87,31 @@ export default function RootLayout({
       "@type": "Person",
       name: "Prathamesh Ugale",
       url: "https://www.sonurajeugale.com",
-      jobTitle: "Full Stack Developer & Visual Creator",
+      jobTitle: "Full Stack Developer",
       knowsAbout: [
-        "Web Development",
+        "Full Stack Development",
+        "React",
+        "Next.js",
         "UI/UX Design",
         "Photography",
         "Illustration"
+      ],
+      hasPart: [
+        {
+          "@type": "CreativeWork",
+          "name": "Developer",
+          "url": "https://www.sonurajeugale.com/developer"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Photography",
+          "url": "https://www.sonurajeugale.com/photography"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Illustrations",
+          "url": "https://www.sonurajeugale.com/illustrations"
+        }
       ]
     }),
   }}

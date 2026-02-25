@@ -11,6 +11,7 @@ import { IllustrationSection } from "@/components/sections/IllustrationSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { Footer } from "@/components/layout/Footer";
 
+
 export default function HomePage() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
 

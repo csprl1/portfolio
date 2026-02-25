@@ -17,6 +17,9 @@ import { Footer } from "@/components/layout/Footer";
 import { ParallaxBackground } from "@/components/ui/ParallaxBackground";
 import { Counter } from "@/components/ui/NewCounter";
 import { MyGear } from "@/components/ui/MyGear";
+import Link from "next/link";
+
+
 
 /* ---------------- DATA ---------------- */
 

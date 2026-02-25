@@ -2,9 +2,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --accent: #f5b942;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 @theme inline {
@@ -328,6 +335,10 @@ body::before {
   * {
     cursor: auto;
   }
+ 
+  html:not(.touch) * {
+  cursor: none;
+}
 
   html, body {
     overflow-x: hidden;
@@ -389,6 +400,8 @@ body::before {
 
   a, button {
     -webkit-tap-highlight-color: transparent;
+     min-width: 48px;
+  min-height: 48px;
   }
 
   .modal-icon {

@@ -18,6 +18,8 @@ import { ParallaxBackground } from "@/components/ui/ParallaxBackground";
 
 /* ---------------- DATA ---------------- */
 
+
+
 import { ChevronRight } from "lucide-react";
 
 const faqs = [
