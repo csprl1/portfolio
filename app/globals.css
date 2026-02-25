@@ -400,3 +400,46 @@ body::before {
     opacity: 0.015;
   }
 }
+
+@media (max-width: 1024px) and (pointer: coarse) {
+
+  * {
+    cursor: auto;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    background: #0a0a0a;
+  }
+
+  .glow-bg,
+  .nav-shimmer,
+  .gradient-border,
+  .glass-sweep {
+    display: none;
+  }
+
+  main,
+  .snap-container {
+    scroll-snap-type: none;
+  }
+
+  section,
+  .snap-section {
+    scroll-snap-align: none;
+  }
+
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .modal-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  body::before {
+    opacity: 0.015;
+  }
+}

@@ -62,14 +62,16 @@ export function Navbar() {
   fixed left-1/2 -translate-x-1/2
   w-[calc(100%-20px)]
   sm:w-[calc(100%-28px)]
-  md:w-full md:max-w-6xl
-  px-3 py-2
+  md:w-full md:max-w-4xl
+  lg:max-w-6xl
+  px-2.5 py-1.5
+  md:px-3 md:py-2
   flex items-center
   rounded-full
-  backdrop-blur-xl
+  backdrop-blur-md md:backdrop-blur-xl
   bg-white/[0.04]
   border border-white/10
-  shadow-[0_8px_40px_rgba(0,0,0,0.6)]
+  shadow-lg md:shadow-[0_8px_40px_rgba(0,0,0,0.6)]
   relative overflow-hidden
 "
           >

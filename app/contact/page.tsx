@@ -117,8 +117,8 @@ const handleSubmit = async (ev: any) => {
         <ContactCard
           icon={<Mail size={18} />}
           label="Email"
-          value="prathameshrajeugale@gmail.com"
-          href="mailto:prathameshrajeugale@gmail.com"
+          value="contact@sonurajeugale.com"
+          href="mailto:contact@sonurajeugale.com"
         />
 
         {/* <ContactCard
