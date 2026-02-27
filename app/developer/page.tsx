@@ -151,7 +151,7 @@ const projects: Project[] = [
   challenge:
     "Maintaining smooth 60fps animation performance while combining scroll-driven transitions, 3D transforms, and video-heavy sections, requiring careful asset optimization and animation tuning.",
   github: "https://github.com/csprl1/ai_intelligence_website", // replace if available
-  demo: "hhttps://ai-intelligence-website.vercel.app/",
+  demo: "https://ai-intelligence-website.vercel.app/",
 },
 
 { icon: LineChart, title: "Analytics Dashboard", desc: "Real-time data visualization platform for business intelligence with interactive charts, custom reports, and WebSocket live feeds.", tech: ["TypeScript", "D3.js", "WebSocket", "Redis"], role: "Full-Stack Developer", duration: "4 months", team: "3 developers", highlights: [ "Developed interactive D3.js visualizations", "Implemented WebSocket live updates", "Optimized performance for large datasets", ], challenge: "Maintaining smooth UI performance while processing real-time streaming data.", github: "https://github.com/yourusername/analytics", demo: "https://demo-link.com", },
