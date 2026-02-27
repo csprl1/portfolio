@@ -19,7 +19,8 @@ import {
   BarChart3,
   Box,
   Link2,
-  Rocket, 
+  Rocket,
+  Atom, 
 } from "lucide-react";
 import Link from "next/link";
 
@@ -120,6 +121,39 @@ const projects: Project[] = [
   challenge:
     "Balancing visual fidelity and real-time rendering performance by leveraging mathematical optimization techniques and efficient GPU resource management.",
 },
+{
+  icon: Atom, // or Cpu / Sparkles / Brain if available in your icon set
+  title: "AI Intelligence Platform – Cinematic Motion Website",
+  desc: "A modern AI-focused web experience showcasing intelligent systems through advanced scroll-based animations, 3D hover interactions, and cinematic video storytelling. Built with React, GSAP, and Tailwind CSS to deliver a premium, enterprise-grade UI.",
+  tech: [
+    "React (Vite)",
+    "JavaScript (ES6+)",
+    "GSAP (ScrollTrigger)",
+    "Tailwind CSS",
+    "HTML5",
+    "WebP / MP4 Optimization",
+    "Vercel",
+  ],
+  role: "Lead Frontend Engineer",
+  duration: "Jan 2026 – Feb 2026",
+  team: "Solo Project",
+  highlights: [
+    "Architected and developed a fully animated AI-themed web platform from scratch",
+    "Implemented scroll-triggered geometric transitions using GSAP ScrollTrigger",
+    "Engineered reusable animated components (Hero, Bento Grid, Floating Image)",
+    "Built perspective-based 3D hover tilt interactions",
+    "Integrated optimized video backgrounds for cinematic storytelling",
+    "Designed modular component structure for scalability and maintainability",
+    "Optimized media assets (WebP / compressed MP4) for performance",
+    "Ensured full responsiveness across desktop, tablet, and mobile devices",
+    "Deployed production-ready build on Vercel",
+  ],
+  challenge:
+    "Maintaining smooth 60fps animation performance while combining scroll-driven transitions, 3D transforms, and video-heavy sections, requiring careful asset optimization and animation tuning.",
+  github: "https://github.com/csprl1/ai_intelligence_website", // replace if available
+  demo: "hhttps://ai-intelligence-website.vercel.app/",
+},
+
 { icon: LineChart, title: "Analytics Dashboard", desc: "Real-time data visualization platform for business intelligence with interactive charts, custom reports, and WebSocket live feeds.", tech: ["TypeScript", "D3.js", "WebSocket", "Redis"], role: "Full-Stack Developer", duration: "4 months", team: "3 developers", highlights: [ "Developed interactive D3.js visualizations", "Implemented WebSocket live updates", "Optimized performance for large datasets", ], challenge: "Maintaining smooth UI performance while processing real-time streaming data.", github: "https://github.com/yourusername/analytics", demo: "https://demo-link.com", },
   {
   icon: LineChart, 
